@@ -6,7 +6,7 @@ void func(const char * const str) {
     
     strncpy(buffer, str, sizeof(buffer));
     buffer[sizeof(buffer)] = '\0';
-    printf("%s", buffer);
+    printf("%s", buffer); // needs \n in print string
 }
 
 // #include <stdio.h>: This line is needed to run the line of code that starts with printf.
