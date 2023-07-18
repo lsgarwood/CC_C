@@ -11,6 +11,13 @@ int main() {
 
     printf("\n2/3 Cups: Granulated Sugar");
     // \n at front makes sure print statement is on new line
+
+    // If you want to create a comment with a beginning and end, you can use /* to begin the comment and */ to end the comment
+    /* The following output will be
+    an outburst from my dog in a 
+    moment of pure joy after seeing 
+    another dog across the street. */
+    printf("Woof!");
 }
 
 // #include <stdio.h>: This line is needed to run the line of code that starts with printf.
