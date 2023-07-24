@@ -1,0 +1,97 @@
+/*
+int	    a whole number	-2,147,483,648 to 2,147,483,647
+float	a number with possible decimals	6 decimal places
+double	a number with possible decimals	15 decimal places
+char	stores one character (letter or number)
+*/
+
+/*
+printf()
+
+symbol	    type
+%d or %i	int
+%f	        double or float
+%c	        char
+
+symbol	effect
+\n	    newline
+\r	    carriage return
+\t	    tab
+*/
+
+#include <stdio.h>
+
+int main() {
+  
+ int ageLearnedToRide = 5;
+
+
+ printf("I was %i years old when I learned to ride a bike.\n", ageLearnedToRide);
+ printf("I hope I still remember how to ride.");
+
+int day = 3;
+printf("Hello World, today is the %drd!", day);
+
+}
+
+#include <stdio.h>
+
+int main() {
+  
+  int numOfBooks = 5;
+  char favLetter = 'l';
+  char favDigit = '7';
+  double costOfCandyBar = 0.75;
+
+  printf("Number of books: %d\n", numOfBooks);
+  printf("Your Favorite Letter is: %c\n", favLetter);
+  printf("Your Favorite Digit is: %c\n", favDigit);
+  printf("You expect to pay $%.2f for a candy bar.\n", costOfCandyBar);
+
+  /*
+  output
+  Number of books: 5
+  Your Favorite Letter is: l
+  Your Favorite Digit is: 7
+  You expect to pay $0.75 for a candy bar. 
+  */
+}
+
+/*When declaring a char, you need single quotes around it:
+
+char foo = 'a';
+char goo = '2';*/
+
+/* Float and Double
+A float has less precision than a double, 6 vs 15 possible decimal places respectively, and therefore takes up less memory (4 vs 8 bytes). 
+However, a double run faster, so you gain speed at the cost of more memory usage
+*/
+
+/*Updating Values
+Two places to set a variables value
+set at declaration
+and any future point in the code
+*/
+
+/*
+Constants
+Any basic data type in C, like those we have gone over, can be declared as a constant using the keyword const before the type. So instead of our template of type variable_name, it would be const type variable_name.
+
+It is also a best practice to use all upper case letters when declaring a constant:
+*/
+
+#include <stdio.h>
+
+int main() {
+  
+// Speed of light is 1.86e5 mi/s or 186000 mi/s we will store 1.86 and do the multiplicaiton later.
+  const double SPEEDOFLIGHT = 1.86;
+  int timeTraveledInSeconds = 30;
+
+  SPEEDOFLIGHT;
+
+
+  // No need to change below here
+  printf("Light would travel %.2f miles in %d seconds\n", SPEEDOFLIGHT * 100000 * timeTraveledInSeconds, timeTraveledInSeconds);
+
+}
