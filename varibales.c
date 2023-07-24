@@ -95,3 +95,42 @@ int main() {
   printf("Light would travel %.2f miles in %d seconds\n", SPEEDOFLIGHT * 100000 * timeTraveledInSeconds, timeTraveledInSeconds);
 
 }
+
+/*
+Casting types
+YOU COULD NOT DO THIS 
+int a;
+double b = 3.0;
+a = b;
+There are two types of conversions, implicit and explicit
+Our example above was implicit, the compiler in this case will make a best guess.
+The other way to convert a variable from another type is explicitly. You can do this by simply telling the compiler what type you want to set it to. So in our example above we could change the line a = b to a = (int)b. 
+That way if b was something other than 3.0, such as 3.2, we are telling the compiler to make it work, so it would set it to 3
+*/
+
+int main() {
+  
+  double testScore = 95.7;
+  int displayScore = 0;
+  displayScore = (int)testScore;
+
+  // No need to change below here
+  printf("Great work, you got a %d%% on your test\n", displayScore);
+
+}
+
+/*In the back-end, a char doesn’t store 'a', it stores the value representing that: 97 for lowercase and 65 for uppercase*/
+int main() {
+  
+  char targetChar;
+  int sourceInt = 99;
+  double sourceDouble = 55.67;
+
+  // Cast here
+  targetChar = (char)sourceInt;
+  targetChar = sourceDouble;
+  // No need to change below here
+  printf("source int %d, source double, %.2f, target %c\n", sourceInt, sourceDouble, targetChar);
+
+}
+
